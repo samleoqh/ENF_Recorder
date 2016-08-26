@@ -1,4 +1,4 @@
 # enf_recorder
-just study how to use GitHub
+ENF singal recorder program, developed by Qt5 Creator. 
 2016/02/10
 Brian Liu
