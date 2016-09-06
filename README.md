@@ -1,4 +1,7 @@
-# enf_recorder
-ENF singal recorder program, developed by Qt5 Creator. 
-2016/02/10
-Brian Liu
+# ENF_Recorder
+ENF Audio Recorder is a handy tool for collecting the variation in frequency in the electric network via the audio card with an AC adapter with the correct voltage. It can assist in forensic research for determining the time of the recording. ENF Audio Recorder is developed in C++ programming language with Open Source Qt creator 5 and the first version only can be run on Windows systems.### User’s Guide
+* Before start recording, User should set suitable parameters. The setting process is illustrated as below.
+	* Check the input device is ready, and shown on the UI.		1.	Audio Codec: audio/pcm (fixed)
+		2. Choose “File Container:” -  audio/x-wav OR audio/x-raw		4.	Set “Sample Rate: ” – select one from a drop down list		5.	Channels: 1 as default for ENF wave.		6.	Bits Per Sample: 16, (fixed)		7.	Enter National ID and Regional ID up to 4 chars, indicates the location of the record. 		8.	Set record duration, the recorder will auto stop when reach the duration. If the setting is 0, it means the recorder won’t auto stop until the Stop button is pressed manually. 		9.	Click Output button to set the output file name. The suffix will be auto generated after start record according to the choice of “File Container”. E.g if output file is named “test”, and the File Container sets “audio/x-wav”, the output file should be saved as “test.wav”, while with “audio/x-raw” setting, the output file should be “test.raw”. 		10.	Generate “.ENF” file option is used to auto produce one enf audio format file with an additional suffix of “.enf” at the end of output file. E.g, if the output file is “test.wav”, the ENF file should be generated with the name of “test.wav.enf”. Please refer to the ENF format specification.
+
+### ENF File Format IntroductionThe ENF Audio File Format is a tailored file format for storing and classifying ENF (Electric Network Frequency) audio data. The raw ENF audio data in “.ENF” files is uncompressed pulse-code modulation (PCM). Details pls refer to the file [ENF Format Spec](https://github.com/samleoqh/enf_recorder/blob/master/setup/Specification%20of%20the%20ENF%20Audio%20File%20Format_V3.pdf "Title")
